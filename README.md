@@ -1,0 +1,7 @@
+# Homepage
+
+## Running
+
+```
+npm start
+```
