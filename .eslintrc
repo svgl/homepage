@@ -1,8 +1,4 @@
 {
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "ecmaVersion": 2020
-    },
     "extends": [
         "@svgl/eslint-config-svgl"
     ],
