@@ -1,6 +1,6 @@
 import React from 'react';
 import '@ibm/plex';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { Nav } from './Nav';
 
@@ -56,19 +56,26 @@ const GlobalStyles = createGlobalStyle`
   mark, .mark {
     background-color: var(--accent-color);
     padding: 0 2px 2px;
+    color: var(--text-color);
   }
+`;
+
+const LayoutStyles = styled.div`
+  display: grid;
+  grid-template-rows: auto 1fr;
 `;
 
 export default function Layout({ children, props }) {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <div {...props}>
-      <Helmet>
+    <>
+      <Helmet attitleTemple="%s - Seth Vergeyle" defaultTitle="Welcome">
         <html lang="en-US" className="theme-default" />
       </Helmet>
       <GlobalStyles />
-      <Nav />
-      {children}
-    </div>
+      <LayoutStyles {...props}>
+        <Nav />
+        <div>{children}</div>
+      </LayoutStyles>
+    </>
   );
 }

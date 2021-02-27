@@ -37,7 +37,9 @@ export function Logo() {
   return (
     <animated.span onMouseEnter={trigger} style={style}>
       <Link to="/">
-        <h2>Seth Vergeyle</h2>
+        <h2>
+          Seth <mark>Vergeyle</mark>
+        </h2>
       </Link>
     </animated.span>
   );
@@ -50,7 +52,7 @@ export function AnimatedLogo() {
   return (
     <animated.span onMouseEnter={trigger} style={style}>
       <Link to="/">
-        <h2 >
+        <h2>
           <Handle scrolled={isScrolled} showOnScroll>
             &lt;
           </Handle>

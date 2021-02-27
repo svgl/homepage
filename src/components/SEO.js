@@ -15,7 +15,7 @@ export default function SEO({ children, title, image, description, location }) {
   `);
 
   return (
-    <Helmet titleTemplate="%s - Seth Vergeyle" defaultTitle="Welcome">
+    <Helmet>
       <title>{title}</title>
 
       <link rel="alternate icon" href="/favicon.ico" />
