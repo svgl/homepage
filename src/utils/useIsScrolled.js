@@ -12,7 +12,7 @@ export function useIsScrolled() {
 
     return () =>
       window.removeEventListener('scroll', handleScroll, { passive: true });
-  }, [window.scrollY, isScrolled]);
+  }, [isScrolled]);
 
-  return { isScrolled };
+  return [isScrolled];
 }

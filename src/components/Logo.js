@@ -2,7 +2,6 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { animated } from 'react-spring';
-import 'twin.macro';
 import { useBoop } from '../utils/useBoop';
 import { useIsScrolled } from '../utils/useIsScrolled';
 
@@ -33,13 +32,25 @@ const Handle = styled.span`
 `;
 
 export function Logo() {
-  const { isScrolled } = useIsScrolled();
   const [style, trigger] = useBoop({ rotation: 5 });
 
   return (
     <animated.span onMouseEnter={trigger} style={style}>
       <Link to="/">
-        <h2 tw="text-2xl">
+        <h2>Seth Vergeyle</h2>
+      </Link>
+    </animated.span>
+  );
+}
+
+export function AnimatedLogo() {
+  const [isScrolled] = useIsScrolled();
+  const [style, trigger] = useBoop({ rotation: 5 });
+
+  return (
+    <animated.span onMouseEnter={trigger} style={style}>
+      <Link to="/">
+        <h2 >
           <Handle scrolled={isScrolled} showOnScroll>
             &lt;
           </Handle>
