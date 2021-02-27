@@ -5,7 +5,7 @@ const BoxStyles = styled.div`
   height: 800px;
 `;
 
-export default function Index() {
+export default function IndexPage() {
   return (
     <>
       <main>

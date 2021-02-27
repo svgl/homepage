@@ -43,5 +43,10 @@
         "eslint-plugin-react-hooks": "^4.2.0",
         "esm": "^3.2.25",
         "prettier": "^2.2.1"
+    },
+    "eslintConfig": {
+        "extends": [
+            "wesbos"
+        ]
     }
 }
