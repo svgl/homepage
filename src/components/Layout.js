@@ -12,7 +12,6 @@ const GlobalStyles = createGlobalStyle`
     --purple: #bd93f9;
   }
 
-  .theme-default,
   .theme-light {
     --text-color: var(--darkGray);
     --bg-color: var(--lightGray);
@@ -23,14 +22,6 @@ const GlobalStyles = createGlobalStyle`
     --text-color: var(--lightGray);
     --bg-color: var(--darkGray);
     --accent-color: var(--purple);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .theme-default {
-      --text-color: var(--lightGray);
-      --bg-color: var(--darkGray);
-      --accent-color: var(--purple);
-    }
   }
 
   html,
@@ -56,7 +47,7 @@ const GlobalStyles = createGlobalStyle`
   button {
     background: inherit;
     color: inherit;
-    border: 0;
+    border: none;
     padding: 0;
     border-radius: 2px;
     cursor: pointer;

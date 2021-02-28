@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useDarkTheme } from '../utils/useDarkTheme';
+import { usePrefersDarkTheme } from '../utils/useDarkTheme';
 import { Logo } from './Logo';
 
 const NavStyles = styled.nav`
@@ -44,7 +44,7 @@ const NavStyles = styled.nav`
 `;
 
 export function Nav() {
-  const { prefersDarkTheme, toggleDarkTheme } = useDarkTheme();
+  const { prefersDarkTheme, toggleDarkTheme } = usePrefersDarkTheme();
 
   return (
     <NavStyles>
