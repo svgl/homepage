@@ -33,6 +33,8 @@ const GlobalStyles = createGlobalStyle`
 
     color: var(--text-color);
     background-color: var(--bg-color);
+
+    transition: color 350ms ease 0s, background 350ms ease 0s;
   }
 
   *, *:before, *:after {
@@ -57,6 +59,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--accent-color);
     padding: 0 2px 2px;
     color: var(--text-color);
+    transition: color 350ms ease 0s, background 350ms ease 0s;
   }
 `;
 

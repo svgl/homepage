@@ -1,7 +1,6 @@
-import { Link } from 'gatsby';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { usePrefersDarkTheme } from '../utils/useDarkTheme';
+import { usePrefersDarkTheme } from '../utils/usePrefersDarkTheme';
 import { Logo } from './Logo';
 
 const NavStyles = styled.nav`
@@ -11,13 +10,16 @@ const NavStyles = styled.nav`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   ul {
     list-style-type: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 
-    li {
-      margin-left: 1rem;
+    li:not(:last-child) {
+      margin-right: 1rem;
     }
 
     a &[aria-current='page'] {
@@ -27,6 +29,11 @@ const NavStyles = styled.nav`
     a {
       display: flex;
       align-items: center;
+
+      svg {
+        height: 1rem;
+        width: 1rem;
+      }
     }
   }
 
