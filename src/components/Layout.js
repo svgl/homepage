@@ -53,6 +53,15 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  button {
+    background: inherit;
+    color: inherit;
+    border: 0;
+    padding: 0;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
   mark, .mark {
     background-color: var(--accent-color);
     padding: 0 2px 2px;
@@ -69,7 +78,7 @@ export default function Layout({ children, props }) {
   return (
     <>
       <Helmet attitleTemple="%s - Seth Vergeyle" defaultTitle="Welcome">
-        <html lang="en-US" className="theme-default" />
+        <html lang="en-US" />
       </Helmet>
       <GlobalStyles />
       <LayoutStyles {...props}>

@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { useDarkTheme } from '../utils/useDarkTheme';
 import { Logo } from './Logo';
 
 const NavStyles = styled.nav`
@@ -14,6 +15,10 @@ const NavStyles = styled.nav`
   ul {
     list-style-type: none;
     display: flex;
+
+    li {
+      margin-left: 1rem;
+    }
 
     a &[aria-current='page'] {
       color: var(--accent-color);
@@ -31,14 +36,54 @@ const NavStyles = styled.nav`
     width: 1rem;
     margin-left: 0.25rem;
   }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 `;
 
 export function Nav() {
+  const { prefersDarkTheme, toggleDarkTheme } = useDarkTheme();
+
   return (
     <NavStyles>
       <Logo />
       <div>
         <ul className="links">
+          <li>
+            <button type="button" onClick={() => toggleDarkTheme()}>
+              {prefersDarkTheme ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
+              )}
+            </button>
+          </li>
           <li>
             <a href="https://github.com/svgl" target="_blank" rel="noreferrer">
               Github

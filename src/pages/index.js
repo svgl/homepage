@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useDarkTheme } from '../utils/useDarkTheme';
 
 const IndexStyles = styled.main`
   max-width: 70ch;
@@ -13,9 +14,13 @@ const IndexStyles = styled.main`
 `;
 
 export default function IndexPage() {
+  const { toggleDarkTheme } = useDarkTheme();
   return (
     <IndexStyles>
       <h1>Welcome! I am Seth Vergeyle</h1>
+      <button type="button" onClick={() => toggleDarkTheme()}>
+        Change theme!
+      </button>
     </IndexStyles>
   );
 }
