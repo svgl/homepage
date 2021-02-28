@@ -3,6 +3,19 @@
         "titleBar.activeForeground": "#000000",
         "titleBar.inactiveForeground": "#0000CC",
         "titleBar.activeBackground": "#E4B363",
-        "titleBar.inactiveBackground": "#E4B363CC",
-    }
+        "titleBar.inactiveBackground": "#e4b363cc",
+    },
+    // These are all my auto-save configs
+    "editor.formatOnSave": true,
+    // turn it off for JS and JSX, we will do this via eslint
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": false
+    },
+    // tell the ESLint plugin to run on save
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
 }
