@@ -42,7 +42,8 @@
         "eslint-plugin-react": "^7.22.0",
         "eslint-plugin-react-hooks": "^4.2.0",
         "esm": "^3.2.25",
-        "prettier": "^2.2.1"
+        "prettier": "^2.2.1",
+        "react-is": "^17.0.1"
     },
     "eslintConfig": {
         "extends": [
